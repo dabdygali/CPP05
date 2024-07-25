@@ -6,7 +6,7 @@
 /*   By: dabdygal <dabdygal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/15 14:20:42 by dabdygal          #+#    #+#             */
-/*   Updated: 2024/07/17 16:15:18 by dabdygal         ###   ########.fr       */
+/*   Updated: 2024/07/18 16:06:54 by dabdygal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,6 +56,9 @@
 
 			// Destructors
 			virtual ~ShrubberyCreationForm();
+
+			// Factory
+			static AForm*	newShrubberyCreationForm(const std::string& target);
 
 			// Getters / Setters
 			virtual const std::string&	getName( void ) const;

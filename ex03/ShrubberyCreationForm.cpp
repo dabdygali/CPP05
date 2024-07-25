@@ -6,13 +6,14 @@
 /*   By: dabdygal <dabdygal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/15 14:47:40 by dabdygal          #+#    #+#             */
-/*   Updated: 2024/07/17 16:18:43 by dabdygal         ###   ########.fr       */
+/*   Updated: 2024/07/18 16:12:16 by dabdygal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <fstream>
 #include <sys/stat.h>
 #include <stdexcept>
+#include <new>
 #include "ShrubberyCreationForm.hpp"
 
 // Static Attributes
@@ -71,6 +72,12 @@ int					ShrubberyCreationForm::getSignGrade( void ) const
 int					ShrubberyCreationForm::getExecGrade( void ) const
 {
 	return _sGradeToExecute;
+}
+
+// Factory
+AForm*	ShrubberyCreationForm::newShrubberyCreationForm(const std::string& target)
+{
+	return new ShrubberyCreationForm(target);
 }
 
 // Actions
